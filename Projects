@@ -22,9 +22,9 @@ Jan Chomicki:
    - Inconsistent Databases (Databases, Big Data, Knowledge Representation)
    - Preference Queries (Databases, Big Data, Knowledge Representation)
 Marina Blanton:
-   - Secure computation and outsourcing (Applied Cryptography, Security)
-   - Data-oblivious algorithms (Algorithms, Applied Cryptography)
-   - Private computation with medical and biometric data (Privacy, Applied Cryptography)
+   - Secure computation and outsourcing (Applied Cryptography, Security, Cryptography)
+   - Data-oblivious algorithms (Algorithms, Applied Cryptography, Cryptography)
+   - Private computation with medical and biometric data (Privacy, Cryptography, Cryptography)
 Karthik Dantu :
    - Multi-UAV Search (Robotics)
    - Visual Sensing for Robot Mapping (Robotics, Sensing)

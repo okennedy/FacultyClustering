@@ -1,42 +1,50 @@
-$:.push "~/ownCloud/CodeSnippets"
+$:.push "lib"
 require 'yaml'
 require 'kmeans-clusterer'
 require 'util.rb'
 
-d = File.read("Areas")
+####################
+### Usage
+####################
+# - First install kmeans-clusterer
+#   > sudo gem install kmeans-clusterer
+# - Then run
+#   > ruby ./cluster.rb
+####################
 
+d = File.read("Projects")
 
-people_with_areas = 
+people_with_keywords = 
   YAML.load(d).map do |person, projects|
-    areas = 
-      projects.map do |area|
-        case area
+    keywords = 
+      projects.map do |keyword|
+        case keyword
         when /\((.*)\)/ then $1.split(/, */)
-        else area
+        else keyword
         end
       end.flatten.uniq
-    [person, areas.map { |a| a.gsub(/^ +/, "").gsub(/ +$/, "").downcase }]
+    [person, keywords.map { |a| a.gsub(/^ +/, "").gsub(/ +$/, "").downcase }]
   end
 
-puts "#{people_with_areas.size} People"
+puts "#{people_with_keywords.size} People"
 
-areas = 
-  people_with_areas
-    .unzip[1]
-    .flatten
-    .uniq
+keywords = 
+  File.readlines("Keywords")
+    .map { |keyword| keyword.downcase.chomp }
 
-area_indices = 
-  areas
-    .map.with_index { |area, idx| [area, idx] }
+keyword_indices = 
+  keywords
+    .map.with_index { |keyword, idx| [keyword, idx] }
     .to_h
 
-labels, data = people_with_areas
-  .map do |person, person_areas|
-    features = [0] * areas.size
-    # p features
-    person_areas.each { |a| features[area_indices[a]] = 1 }
-    # p features
+labels, data = people_with_keywords
+  .map do |person, person_keywords|
+    features = [0] * keywords.size
+    person_keywords.each do |keyword| 
+      keyword_idx = keyword_indices[keyword]
+      raise "#{person} used an invalid keyword: #{keyword}" if keyword_idx.nil?
+      features[keyword_idx] = 1 
+    end
     [ person, features ]
   end
   .unzip
@@ -54,9 +62,9 @@ kmeans.clusters.each do |cluster|
     cluster
       .centroid
       .to_a
-      .map.with_index { |str, idx| [str, "#{areas[idx]} (#{str*100}%)"] }
+      .map.with_index { |str, idx| [str, "#{keywords[idx]} (#{str*100}%)"] }
       .select { |a| a[0] > 0.0 }
       .sort_by { |a| -a[0] }
       .map { |a| a[1] }
-  puts "Disciplines: \n#{fields.join("\n")}"
+  puts "Keywords: \n#{fields.join("\n")}"
 end
