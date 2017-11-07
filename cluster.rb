@@ -57,7 +57,7 @@ kmeans.clusters.each do |cluster|
   puts ""
   puts "=========== Cluster #{cluster.id} ==========="
 
-  puts "People in Cluster: " + cluster.points.map{ |c| c.label }.join(",")
+  puts "Example Members: " + cluster.points.map{ |c| c.label }.join(",")
   fields = 
     cluster
       .centroid
