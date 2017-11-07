@@ -37,20 +37,29 @@ keyword_indices =
     .map.with_index { |keyword, idx| [keyword, idx] }
     .to_h
 
+keywords_by_people = 
+  people_with_keywords
+    .map { |person, keywords| keywords.map { |keyword| [keyword, person] } }
+    .flatten(1)
+    .reduce
+
+keyword_frequency = 
+  keywords_by_people.map { |keyword, people| [keyword, people.size] }.to_h
+
 labels, data = people_with_keywords
   .map do |person, person_keywords|
     features = [0] * keywords.size
     person_keywords.each do |keyword| 
       keyword_idx = keyword_indices[keyword]
       raise "#{person} used an invalid keyword: #{keyword}" if keyword_idx.nil?
-      features[keyword_idx] = 1 
+      features[keyword_idx] = keyword_frequency[keyword]
     end
     [ person, features ]
   end
   .unzip
 
 # p data
-k = 5
+k = 7
 kmeans = KMeansClusterer.run k, data, labels: labels, runs: 1000
 
 kmeans.clusters.each do |cluster|
@@ -62,7 +71,7 @@ kmeans.clusters.each do |cluster|
     cluster
       .centroid
       .to_a
-      .map.with_index { |str, idx| [str, "#{keywords[idx]} (#{str*100}%)"] }
+      .map.with_index { |strength, idx| [strength, "#{keywords[idx]} (#{strength*100 / (keyword_frequency[keywords[idx]] or 1)}%)"] }
       .select { |a| a[0] > 0.0 }
       .sort_by { |a| -a[0] }
       .map { |a| a[1] }
