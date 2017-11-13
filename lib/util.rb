@@ -195,9 +195,7 @@ class Array
     
     ( unless headers.nil? then
         [ " " + headers.zip(row_sizes).map do |col, exp_size|
-            col + (if col.size < exp_size then 
-              (" " * (exp_size - col.size))
-            else "" end)
+            col.center(exp_size)
           end.join(" | "), 
           ("-" * (row_sizes.sum + 2 + (row_sizes.length - 1) * 3))
         ]

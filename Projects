@@ -6,10 +6,10 @@ Jennifer Winikus:
    - Computer Engineering Education (Computing Education and Outreach)
    - Representation and analysis of data, data fusion (Machine Learning) 
 Wen Dong:
-   - Complex Interaction Systems (Machine Learning, Interdisciplinary)
+   - Complex Interaction Systems (Machine Learning, Interdisciplinary, Cyberphysical Systems)
    - Approximate Inference (Machine Learning)
    - Multi-agent learning (Machine Learning)
-Sargur Srihari:
+Sargur (Hari) N. Srihari:
    - Computational Forensics (Artificial Intelligence)
    - Deep Learning (Machine Learning)
    - Probabilistic Graphical Models (Artificial Intelligence, Machine Learning)
@@ -32,7 +32,7 @@ Karthik Dantu :
    - Modeling UAV flight dynamics (Robotics, Machine Learning)
    - API Virtualization in Mobile Systems (Robotics, Operating Systems)
    - Real-time application infrastructure in mobile systems (Operating Systems, Mobile Systems)
-Kenneth W. Regan:
+Ken Regan:
    - Computational complexity classes (Theory)
    - Low-level complexity (Algorithms)
    - Barriers to lower bounds (Theory)
@@ -48,9 +48,9 @@ Atri Rudra:
    - Probabilistic Inference (Artificial Intelligence, Algorithms)
    - Sublinear Algorithms (Algorithms)
 A. Erdem Sariyuce:
-   - Graph Mining (Data Mining, Algorithms, Big Data)
-   - Streaming Graph Algorithms (Big Data)
-   - Parallel Graph Processing (high performance and scientific computing)
+   - Graph Mining (Data Mining, Algorithms, Big Data, Graph Algorithms)
+   - Streaming Graph Algorithms (Big Data, Graph Algorithms, Databases)
+   - Parallel Graph Processing (high performance and scientific computing, Graph Algorithms)
 Chunming Qiao:
    - Cyber Physical Systems / Internet of Things (Big Data, Transportation, Mobile Systems, Sensing)
    - Connected and Autonomous Vehicles (Transportation, Software Engineering)
@@ -66,8 +66,8 @@ Nils Napp:
    - Multi-Agent Systems (Artificial Intelligence, Interdisciplinary) 
    - Bio-Inspired Algorithm Design and Modeling (Artificial Intelligence, Algorithms) 
 Mingchen Gao:
-   - Biomedical Imaging Analysis ( Computer Vision, Machine Learning, Artificial Intelligence )
-   - Computer Aided diagnosis (Computer Vision, Machine Learning, Artificial Intelligence)
+   - Biomedical Imaging Analysis ( Computer Vision and Image Processing, Machine Learning, Artificial Intelligence )
+   - Computer Aided diagnosis (Computer Vision and Image Processing, Machine Learning, Artificial Intelligence)
 Shi Li :
    - Approximation Algorithms (Algorithms, Theory)
    - Combinatorial Optimization (Algorithms, Theory)
@@ -97,7 +97,7 @@ Marco Gaboardi:
    - Type systems and program logics (Programming languages)
    - Language-based privacy and security (programming languages, security, Privacy)
    - Differential privacy (privacy, security)
-Jaric Zola:
+Jaroslaw (Jaric) Zola:
    - Computational Biology and Bioinformatics (High Performance and Scientific Computing, Interdisciplinary)
    - Biomedical Informatics (High Performance and Scientific Computing, Interdisciplinary, Databases)
    - Parallel Computing (High Performance and Scientific Computing, Interdisciplinary)
@@ -119,7 +119,123 @@ Wenyao Xu:
    - Sensing Systems (Sensing)
    - Computer Hardware and Architectures (Hardware Systems)
    - Security and Biometric Systems (Hardware Systems, Sensing)
-Xin He:
-   - Graph Algorithm (Algorithms)
-   - Graph Theory (Theory)
-   - Graph Drawing (Algorithms)
+Xin (Roger) He:
+   - Graph Algorithm (Algorithms, Graph Algorithms)
+   - Graph Theory (Theory, Graph Algorithms)
+   - Graph Drawing (Algorithms, Graph Algorithms)
+Kui Ren:
+   - Wireless Security (Security)
+   - Cloud Security (Security)
+   - IoT Security (Security)
+   - Crowdsourcing Security (Security, Crowdsourcing)
+   - Mobile Security (Security, Mobile Systems)
+   - Privacy
+   - Network Security (Security, Networking) 
+   - Pervasive Computing
+Venu Govindaraju: 
+   - Machine Learning
+   - Data Mining
+   - Computer Vision and Image Processing
+Ethan Blanton: 
+   - Programming Languages
+   - Networking
+Vipin Chaudhary:
+   - High Performance and Scientific Computing
+   - Bioinformatics
+   - Cyberphysical Systems
+   - Computer Vision and Image Processing
+Chang Wen Chen:
+   - Sensing
+   - Computer Vision and Image Processing
+   - Networking
+   - Data Visualization
+Jing Gao:
+   - Databases
+   - Machine Learning
+   - Data Mining
+Jesse Hartloff:
+   - Computing Education and Outreach
+   - Programming Languages
+   - Theory
+Andrew Hughes:
+   - Computing Education and Outreach
+   - Theory
+   - Algorithms
+Alan Hunt:
+   - Programming Languages
+   - Software Engineering
+Kevin R. Keane:
+   - Machine Learning
+   - Numerical Analysis
+Tevfik Kosar:
+   - Networking
+   - Distributed Systems
+   - High Performance and Scientific Computing
+Dimitrios Koutsonikolas:
+   - Networking
+   - Mobile Systems
+Kevin Kwiat:
+   - Security
+   - Information Security
+Marianthi Markatou:
+   - Databases
+   - Interdisciplinary
+   - Bioinformatics
+   - Machine Learning
+   - Data Mining
+Russ Miller:
+   - High Performance and Scientific Computing
+   - Theory
+   - Algorithms
+   - Interdisciplinary
+Hung Ngo:
+   - Theory
+   - Networking
+   - Numerical Analysis
+James Scandale:
+   - Computing Education and Outreach
+Kris Schindler:
+   - Cyberphysical Systems
+   - Hardware Systems
+   - Computing Education and Outreach
+Barry Smith:
+   - Knowledge Representation
+   - Interdisciplinary
+Ramalingam Sridhar:
+   - Networking
+   - Hardware Systems
+   - Distributed Systems
+Rohini Srihari:
+   - Big Data
+   - Information Extraction and Retrieval
+   - Data Mining
+Lu Su:
+   - Mobile Systems
+   - Networking
+   - Cyberphysical Systems
+Yijun Sun:
+   - Bioinformatics
+   - Machine Learning
+   - Interdisciplinary
+Zhi Sun:
+   - Networking
+   - Mobile Systems
+   - Cyberphysical Systems
+Jinhui Xu:
+   - Bioinformatics
+   - Theory
+   - Algorithms
+   - Numerical Analysis
+   - Computer Vision and Image Processing
+Aidong Zhang:
+   - Bioinformatics
+   - Databases
+   - Computer Vision and Image Processing
+   - Databases
+Lukasz (Luke) Ziarek:
+   - Distributed Systems
+   - Programming Languages
+   - Data Visualization
+   - Mobile Systems
+Satish Tripathi: 
+   - Networking

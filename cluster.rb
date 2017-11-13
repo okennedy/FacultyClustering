@@ -28,6 +28,19 @@ people_with_keywords =
 
 puts "#{people_with_keywords.size} People"
 
+if File.exists? "Faculty"
+  faculty = YAML.load(File.read("Faculty"))
+  names = faculty.keys
+  people_with_keywords.each do |person, keywords|
+    names.delete(person)
+  end
+  unless names.empty?
+    puts "----- Missing ------"
+    puts names.join("\n")  
+  end
+end
+
+
 keywords = 
   File.readlines("Keywords")
     .map { |keyword| keyword.downcase.chomp }
@@ -52,11 +65,21 @@ labels, data = people_with_keywords
     person_keywords.each do |keyword| 
       keyword_idx = keyword_indices[keyword]
       raise "#{person} used an invalid keyword: #{keyword}" if keyword_idx.nil?
-      features[keyword_idx] = keyword_frequency[keyword]
+      features[keyword_idx] = 1 #keyword_frequency[keyword]
     end
     [ person, features ]
   end
   .unzip
+
+File.open("Features", "w+") do |f|
+  f.puts(keywords.join(","))
+  data.each do |vector|
+    f.puts(vector.join(","))
+  end
+end
+
+puts "=========== Keyword Frequency ==========="
+puts keyword_frequency.to_a.sort_by { |k, f| -f }.to_table(["Keyword", "Faculty"])
 
 # p data
 k = 7
@@ -71,7 +94,7 @@ kmeans.clusters.each do |cluster|
     cluster
       .centroid
       .to_a
-      .map.with_index { |strength, idx| [strength, "#{keywords[idx]} (#{strength*100 / (keyword_frequency[keywords[idx]] or 1)}%)"] }
+      .map.with_index { |strength, idx| [strength, "#{keywords[idx]} (#{strength*100}%)"] }  #/ (keyword_frequency[keywords[idx]] or 1
       .select { |a| a[0] > 0.0 }
       .sort_by { |a| -a[0] }
       .map { |a| a[1] }
