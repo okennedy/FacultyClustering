@@ -72,9 +72,9 @@ labels, data = people_with_keywords
   .unzip
 
 File.open("Features", "w+") do |f|
-  f.puts(keywords.join(","))
-  data.each do |vector|
-    f.puts(vector.join(","))
+  f.puts((["Name"]+keywords).join(","))
+  labels.zip(data).each do |name, vector|
+    f.puts(([name]+vector).join(","))
   end
 end
 
